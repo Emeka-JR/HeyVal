@@ -1,0 +1,76 @@
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* unchanged */
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 360px) {
+  .media-grid {
+    grid-template-columns: 1fr; /* unchanged */
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .media-item {
+    border-width: 3px; /* unchanged – but we can make it warmer */
+    border-color: #8B4513; /* warm brown – optional but recommended */
+  }
+
+  .media-content {
+    border-radius: 14px; /* softer than 10px – more beautiful edge */
+  }
+
+  /* Shorter videos on small screens – unchanged */
+  .video-player {
+    max-height: 280px !important;
+    aspect-ratio: 9 / 16;
+  }
+
+  .caption {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.4rem;
+  }
+}
+
+/* Highlight frame design – only visual changes */
+.media-item {
+  border-radius: 20px;                 /* significantly more beautiful rounding */
+  overflow: hidden;
+  
+  /* Soft highlight frame: brown outer glow + depth */
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.16),      /* main soft shadow */
+    0 0 0 7px rgba(139, 69, 19, 0.09),   /* gentle brown highlight/glow ring */
+    inset 0 1px 10px rgba(255, 255, 255, 0.30); /* subtle inner light glow */
+  
+  border: 3px solid #8B4513;           /* warm brown border – same thickness */
+  transition: box-shadow 0.4s ease, transform 0.35s ease;
+}
+
+.media-item:hover {
+  transform: translateY(-4px);         /* very gentle lift – no size change */
+  box-shadow: 
+    0 14px 38px rgba(0, 0, 0, 0.22),
+    0 0 0 11px rgba(139, 69, 19, 0.15),  /* stronger highlight glow on hover */
+    inset 0 2px 14px rgba(255, 255, 255, 0.40);
+}
+
+/* Video player – refined edges only */
+.video-player {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  
+  border-radius: 16px;                 /* slightly less than wrapper → nice framed look */
+  
+  /* Soft inner highlight */
+  box-shadow: inset 0 1px 8px rgba(255, 255, 255, 0.35);
+}
+
+/* Unchanged height limit */
+.video-player {
+  max-height: 360px;
+  height: auto;
+}

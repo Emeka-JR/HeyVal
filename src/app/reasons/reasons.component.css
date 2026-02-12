@@ -1,0 +1,66 @@
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.reason-card {
+  background: #D2B48C; /* tan brown */
+  padding: 1.6rem;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+  transition: transform 0.3s ease;
+  min-height: 120px; /* consistent height */
+}
+
+.reason-card:hover {
+  transform: translateY(-8px);
+}
+
+.number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #8B4513;
+  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.reason-card p {
+  margin: 1rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #4A2C0B;
+}
+
+/* iPod Touch / small screen tweaks */
+@media (max-width: 360px) {
+  .reasons-grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 1.2rem;
+  }
+
+  .reason-card {
+    padding: 1.2rem;
+  }
+
+  .reason-card p {
+    font-size: 1rem;
+  }
+
+  .number {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+}

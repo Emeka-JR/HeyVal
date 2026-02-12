@@ -1,0 +1,8 @@
+.type-target {
+  font-size: 1.45rem;
+  line-height: 1.65;
+  text-align: center;
+  min-height: 160px;
+  white-space: pre-wrap;
+  padding: 1rem 0;
+}

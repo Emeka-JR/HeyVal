@@ -1,0 +1,27 @@
+<h2>You are Breathtaking 😍😋</h2>
+
+<div class="media-grid">
+  <div *ngFor="let item of mediaItems" class="media-item fade-in">
+    <!-- Images -->
+    <!-- <img *ngIf="item.type === 'image'"
+         [src]="item.src"
+         [alt]="item.alt"
+         class="media-content"> -->
+
+    <!-- Videos -->
+    <video *ngIf="item.type === 'video'"
+           controls
+           autoplay
+           muted
+           loop
+           playsinline
+           preload="metadata"
+           class="media-content video-player">
+      <source [src]="item.src" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Optional caption below each media -->
+    <!-- <p class="caption">{{ item.alt }}</p> -->
+  </div>
+</div>

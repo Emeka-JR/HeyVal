@@ -1,0 +1,9 @@
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: url('/assets/background1.jpg') ;
+  /* background-size: cover; */
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(74, 44, 11, 0.25);
+}

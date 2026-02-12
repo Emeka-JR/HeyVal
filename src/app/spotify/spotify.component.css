@@ -1,0 +1,47 @@
+.spotify-wrap {
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.spotify-iframe {
+  border-radius: 12px;
+  width: 100%;
+  height: 352px; /* playlist – use 152px for single track */
+  display: block;
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.15);
+  border: 2px solid #8B4513; /* subtle brown frame */
+}
+
+.spotify-note {
+  font-size: 1rem;
+  color: #4A2C0B;
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Responsive for small screens (iPod Touch ~320px) */
+@media (max-width: 360px) {
+  .spotify-wrap {
+    max-width: 100%;
+    margin: 1.5rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .spotify-iframe {
+    height: 300px; /* shorter on tiny screens to fit viewport */
+    border-radius: 10px;
+  }
+
+  .spotify-note {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra compact for very small heights */
+@media (max-height: 600px) {
+  .spotify-iframe {
+    height: 280px !important;
+  }
+}
