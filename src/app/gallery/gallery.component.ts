@@ -12,9 +12,9 @@ export class GalleryComponent {
     // { type: 'image', src: 'assets/her2.jpg', alt: 'You laughing' },
 
     // Add your short videos here (mp4)
-    { type: 'video', src: 'assets/vid1.mp4', alt: 'Your cute smile moment' },
-    { type: 'video', src: 'assets/vid2.mp4', alt: 'Dancing like nobody’s watching' },
-    { type: 'video', src: 'assets/vid3.mp4', alt: 'That contagious laugh' },
+    { type: 'video', src: 'assets/vid1.mp4', alt: 'Face Card Lethal🔥' },
+    { type: 'video', src: 'assets/vid2.mp4', alt: 'Okayyy, 360 for the camera😏😍' },
+    { type: 'video', src: 'assets/vid3.mp4', alt: 'Yummyyyy😋' },
 
     // Add as many as you want
   ];
