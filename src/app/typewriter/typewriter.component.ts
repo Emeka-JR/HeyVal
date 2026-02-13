@@ -33,7 +33,7 @@ export class TypewriterComponent implements AfterViewInit {
       console.log('Typewriter instance created');
 
       writer
-        .type('To my beautiful Girlfriend,')
+        .type('To Ayo mi, my beautiful Girlfriend,')
         .rest(1400)                  // ← correct pause method
         .type('\nI created this just for you ❤️')
         .rest(2200)
