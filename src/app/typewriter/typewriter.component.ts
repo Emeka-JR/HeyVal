@@ -36,9 +36,12 @@ export class TypewriterComponent implements AfterViewInit {
         .type('To Ayo mi, my beautiful Girlfriend,')
         .rest(1400)                  // ← correct pause method
         .type('\nI created this just for you ❤️')
-        .rest(2200)
+        .rest(2000)
         .clear()                     // ← clears all text (animated)
         .type('You make every single day feel warmer')
+        .rest(2200)
+        .clear()                     // ← clears all text (animated)
+        .type('I love you more than words can say')
         .rest(3000)
         .start();
 
