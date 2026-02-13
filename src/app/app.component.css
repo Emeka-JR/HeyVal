@@ -8,3 +8,45 @@
   box-shadow: 0 10px 30px rgba(74, 44, 11, 0.25);
 }
 
+.hero-heading {
+  position: relative;
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #8B4513;
+  text-shadow: 2px 2px 6px rgba(139, 69, 19, 0.4);
+  letter-spacing: 1.5px;
+}
+
+/* Small floating hearts around the title */
+.hero-heading::before,
+.hero-heading::after {
+  content: '❤️';
+  position: absolute;
+  font-size: 2.2rem;
+  color: #A0522D;
+  opacity: 0.7;
+  animation: float-heart 7s ease-in-out infinite;
+}
+
+.hero-heading::before {
+  left: 20%;
+  top: -20px;
+  animation-delay: 0s;
+}
+
+.hero-heading::after {
+  right: 20%;
+  top: -30px;
+  animation-delay: 3s;
+}
+
+@keyframes float-heart {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-30px) rotate(15deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
